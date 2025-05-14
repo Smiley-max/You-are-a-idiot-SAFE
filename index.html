@@ -1,45 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
-  <title>you are an idiot</title>
+  <title>you are a idiot!</title>
   <style>
     body {
       margin: 0;
-      background-color: white;
+      height: 100vh;
+      background-color: black;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
     }
 
     img {
-      border: 2px solid black;
+      max-width: 100%;
+      max-height: 100%;
     }
   </style>
 </head>
 <body>
-  <!-- GIF vises i midten -->
-  <img src="idiot.gif" alt="you are an idiot">
-
-  <!-- Lydfil -->
-  <audio id="idiotSound" src="idiot.mp3" autoplay></audio>
-
-  <script>
-    const sound = document.getElementById("idiotSound");
-
-    // Når lyden stopper, afspil igen
-    sound.addEventListener("ended", () => {
-      sound.currentTime = 0;
-      sound.play();
-    });
-
-    // Hvis autoplay bliver blokeret, prøv igen ved klik
-    document.body.addEventListener("click", () => {
-      sound.play().catch(() => {
-        console.log("Autoplay er muligvis blokeret.");
-      });
-    });
-  </script>
+  <img src="idiot.gif" alt="Idiot GIF">
+  <audio src="idiot.mp3" autoplay loop></audio>
 </body>
 </html>
